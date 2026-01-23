@@ -7,6 +7,7 @@ import com.awesomemin.awesomeshares.dto.FileDownloadResponse;
 import com.awesomemin.awesomeshares.dto.SharedFileResponse;
 import com.awesomemin.awesomeshares.repository.SharedFileRepository;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Service;
@@ -23,6 +24,7 @@ import java.util.concurrent.ThreadLocalRandom;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
+@Slf4j
 @Service
 @RequiredArgsConstructor
 @Transactional(readOnly = true)
