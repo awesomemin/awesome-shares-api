@@ -12,8 +12,8 @@ public class SharedFileResponse {
     private LocalDateTime expireAt; // 만료 시간
 
     public SharedFileResponse(SharedFile file, String domain) {
-        // 예: http://localhost:8080 + /download/ + uuid-token
-        this.downloadUrl = domain + "/download/" + file.getShareToken();
+        // 예: http://localhost:8080 + /api/download/ + uuid-token
+        this.downloadUrl = domain + "/api/download/" + file.getShareToken();
         this.shareCode = file.getShareCode();
         this.expireAt = file.getExpireAt();
     }
