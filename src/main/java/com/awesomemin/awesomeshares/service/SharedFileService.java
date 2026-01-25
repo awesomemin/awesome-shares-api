@@ -59,10 +59,10 @@ public class SharedFileService {
             fileSize = file.getSize();
         } else {
             File zipFile = createZipFile(files);
+            fileSize = zipFile.length();
             storeFilename = fileStore.storeFile(zipFile); // 디스크에 저장
             originalFilename = files.getFirst().getOriginalFilename() + "외 " + (files.size() - 1) + "건.zip";
             contentType = "application/zip";
-            fileSize = zipFile.length();
         }
 
         String shareCode = generateUniqueShareCode();
